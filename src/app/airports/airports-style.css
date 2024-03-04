@@ -1,0 +1,70 @@
+.airports-page-container {
+    width: 80%;
+    max-width: 80rem;
+    margin: 2rem auto;
+    min-height: 100vh;
+}
+
+.airports-page-container h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.airports-page-container .form-container {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.airports-page-container .form-container h3 {
+    margin-bottom: .6rem;
+}
+
+.airports-page-container .form-container input {
+    background: #f4f4f4;
+    border-radius: .5rem;
+    padding: .3rem;
+    border:solid 1px #c39d9d;
+    max-width: 15rem;
+    color: black;
+}
+
+.airports-page-container .form-container .airport-list {
+    position: absolute;
+    background: #ddd;
+    border-radius: .4rem;
+    outline: none;
+    overflow: hidden;
+}
+
+.airports-page-container .form-container .airport-list .airport-list-item {
+    background: #f4f4f4;
+}
+
+.airports-page-container .form-container .airport-list .airport-list-item button {
+    border:none;
+    box-shadow:none;
+    background: transparent;
+    color: black;
+    padding: .4rem 1rem;
+    width: 100%;
+    text-align: left;
+    border-bottom: solid 1px #BDBDBD;
+    border-top: solid 1px #fefefe;
+}
+
+.airports-page-container .form-container .airport-list .airport-list-item:last-child button {
+    border-bottom: none;
+}
+
+.airports-page-container .form-container .airport-list .airport-list-item:hover button {
+    background: pink;
+    border-top: solid 1px #fefefe;
+    cursor: pointer;
+
+}
+
+.airport-list-container {
+    position: relative;
+}

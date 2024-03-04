@@ -4,6 +4,10 @@ import styles from "./page.module.css";
 export default function Home() {
   return (
     <main className={styles.main}>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/contact">Contact</a>
+      </nav>
       <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
