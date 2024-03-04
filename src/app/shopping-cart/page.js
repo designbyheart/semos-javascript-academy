@@ -8,6 +8,7 @@ export default function ShoppingCartPage() {
     const [products, setProducts] = useState([]);
 
     const loadProduct = async () => {
+        // TODO: Update to state (setProducts)
         console.log("products", await apiLoadProducts());
     }
 
