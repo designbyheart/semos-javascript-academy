@@ -1,0 +1,12 @@
+.input-field-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: .5rem;
+
+  input {
+    background: $input-background;
+    border:none;
+    padding: .5rem;
+    border-radius: .2rem;
+  }
+}

@@ -1,0 +1,23 @@
+.auth-page {
+    background: #6A62D2;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+
+    .auth-form {
+        background: white;
+        margin: 0 auto 10rem auto;
+        border-radius: .4rem;
+        gap: 1rem;
+        padding: 1rem;
+
+        h1 {
+            color: black;
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+    }
+}
