@@ -8,10 +8,12 @@ const LoginForm = ({ onSubmit }) => {
   });
 
   return (
-    <form onSubmit={(event) => onSubmit(event, loginFormData)} className={"auth-form"}>
-      <p>Ovo je forma</p>
+    <form
+      onSubmit={(event) => onSubmit(event, loginFormData)}
+      className={"auth-form"}
+    >
       <label htmlFor="email">Email address</label>
-      <br />
+
       <input
         id="email"
         name="test"
@@ -22,10 +24,7 @@ const LoginForm = ({ onSubmit }) => {
         }
         type="text"
       />
-      <br />
-      <br />
       <label htmlFor="email">Password</label>
-      <br />
       <input
         id="password"
         name="password"
@@ -39,26 +38,26 @@ const LoginForm = ({ onSubmit }) => {
           })
         }
       />
-      <br />
-
-      <input
-        id="terms"
-        type="checkbox"
-        checked={loginFormData.acceptedTerms}
-        onChange={() =>
-          setLoginFormData({
-            ...loginFormData,
-            acceptedTerms: !loginFormData.acceptedTerms,
-          })
-        }
-      />
-      <label htmlFor="terms">
-        {" "}
-        I am accepting{" "}
-        <a href="/terms" target="_blank">
-          terms and conditions
-        </a>
-      </label>
+      <div className="checkbox-container">
+        <input
+          id="terms"
+          type="checkbox"
+          checked={loginFormData.acceptedTerms}
+          onChange={() =>
+            setLoginFormData({
+              ...loginFormData,
+              acceptedTerms: !loginFormData.acceptedTerms,
+            })
+          }
+        />
+        <label htmlFor="terms">
+          {" "}
+          I am accepting{" "}
+          <a href="/terms" target="_blank">
+            terms and conditions
+          </a>
+        </label>
+      </div>
 
       <br />
       <button type="submit">Login</button>
