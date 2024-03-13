@@ -3,8 +3,15 @@
 import NavigationMenu from '@/components/molecules/NavigationMenu';
 import LoginForm from '@/components/organisms/LoginForm';
 import { isFieldValid } from '@/data/validators/fieldValidator';
+import { useEffect } from 'react';
 
 const LoginPage = () => {
+  
+  useEffect(() => {
+    const token = localStorage.getItem("token")
+    console.log("token is here:===", token)
+  }, []);
+
   const handleOnSubmit = async (event, loginFormData) => {
     event.preventDefault();
     console.log("loginFormData", loginFormData, event);
@@ -26,6 +33,8 @@ const LoginPage = () => {
         const jsonResponse = await response.json();
         console.log('response from server', jsonResponse)
         // TODO: Redirekcija ka private strani (dashboard)
+        localStorage.setItem("token", jsonResponse.token);
+
       } else {
         console.error('Failed to fetch data', response);
       }
