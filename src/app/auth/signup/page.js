@@ -10,6 +10,8 @@ export default function SignUpPage() {
       console.log("token is here:===", token);
     }, []);
 
+    const test = () => {}
+
     return (
       <div className="auth-page sign-up-page">
         <NavigationMenu />
