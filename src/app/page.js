@@ -5,7 +5,7 @@ import NavigationMenu from "@/components/molecules/NavigationMenu";
 export default function Home() {
   return (
     <main className={styles.main}>
-      <NavigationMenu/>
+      <NavigationMenu />
     </main>
   );
 }

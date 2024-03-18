@@ -1,34 +1,34 @@
+import Link from "next/link";
 import { useState } from "react";
 
 const LoginForm = ({ onSubmit }) => {
   const [loginFormData, setLoginFormData] = useState({
     email: "",
     password: "",
-    acceptedTerms: false,
+    keepSigned: false,
   });
 
   return (
     <form
       onSubmit={(event) => onSubmit(event, loginFormData)}
-      className={"auth-form"}
+      className="auth-form"
     >
-      <label htmlFor="email">Email address</label>
+      <h1>Sign in to your account</h1>
 
       <input
         id="email"
         name="test"
-        placeholder="Please enter your email"
+        placeholder="johnnythedesigner@gmail.com"
         value={loginFormData.email}
         onChange={(event) =>
           setLoginFormData({ ...loginFormData, email: event.target.value })
         }
         type="text"
       />
-      <label htmlFor="email">Password</label>
       <input
         id="password"
         name="password"
-        placeholder="Please enter password"
+        placeholder="**********"
         value={loginFormData.password}
         type="password"
         onChange={(event) =>
@@ -40,40 +40,24 @@ const LoginForm = ({ onSubmit }) => {
       />
       <div className="checkbox-container">
         <input
-          id="terms"
+          id="keepSigned"
           type="checkbox"
-          checked={loginFormData.acceptedTerms}
+          checked={loginFormData.keepSigned}
           onChange={() =>
             setLoginFormData({
               ...loginFormData,
-              acceptedTerms: !loginFormData.acceptedTerms,
+              keepSigned: !loginFormData.keepSigned,
             })
           }
         />
-        <label htmlFor="terms">
-          {" "}
-          I am accepting{" "}
-          <a href="/terms" target="_blank">
-            terms and conditions
-          </a>
-        </label>
+        <label htmlFor="keepSigned">Keep me signed in</label>
       </div>
 
-      <br />
-      <button type="submit">Login</button>
-      <br />
-      <button
-        type="reset"
-        onClick={() =>
-          setLoginFormData({
-            email: "",
-            password: "",
-            acceptedTerms: false,
-          })
-        }
-      >
-        Cancel - Reset
-      </button>
+      <button type="submit">Sign in</button>
+
+      <Link href="/" className="link">
+        Forgot your password?
+      </Link>
     </form>
   );
 };
