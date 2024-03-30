@@ -1,16 +1,19 @@
-'use client';
+"use client";
 
-import NavigationMenu from '@/components/molecules/NavigationMenu';
-import LoginForm from '@/components/organisms/LoginForm';
-import { isFieldValid } from '@/data/validators/fieldValidator';
+import NavigationMenu from "@/components/molecules/NavigationMenu";
+import LoginForm from "@/components/organisms/LoginForm";
+import { isFieldValid } from "@/data/validators/fieldValidator";
 
 const LoginPage = () => {
   const handleOnSubmit = async (event, loginFormData) => {
     event.preventDefault();
     console.log("loginFormData", loginFormData, event);
 
-    if(!isFieldValid(loginFormData.email) || !isFieldValid(loginFormData.password)) {
-      alert('Neispravni podaci');
+    if (
+      !isFieldValid(loginFormData.email) ||
+      !isFieldValid(loginFormData.password)
+    ) {
+      alert("Neispravni podaci");
       return;
     }
 
@@ -22,19 +25,18 @@ const LoginPage = () => {
       body: JSON.stringify(loginFormData),
     });
 
-      if (response.ok) {
-        const jsonResponse = await response.json();
-        console.log('response from server', jsonResponse)
-        // TODO: Redirekcija ka private strani (dashboard)
-      } else {
-        console.error('Failed to fetch data', response);
-      }
+    if (response.ok) {
+      const jsonResponse = await response.json();
+      console.log("response from server", jsonResponse);
+      // TODO: Redirekcija ka private strani (dashboard)
+    } else {
+      console.error("Failed to fetch data", response);
+    }
   };
 
   return (
-    <div className="auth-page login-page">
+    <div className="auth-page">
       <NavigationMenu />
-      <h1>Login</h1>
       <LoginForm onSubmit={handleOnSubmit} />
     </div>
   );

@@ -1,65 +1,78 @@
 .auth-page {
-    background: #6A62D2;
-    min-height: 100vh;
+  background: #6a62d2;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+
+  .auth-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: #222;
-    font-size: 0.8rem;
+    background: white;
+    margin: 0 auto 10rem auto;
+    border-radius: 4px;
+    gap: 1rem;
+    padding: 2rem;
+    width: 20rem;
 
-     h1 {
-            color: white;
-            font-size: 1.4rem;
-            font-weight: 500;
-            margin-bottom: 1rem;
-            text-align: center;
-            width: 100%;
-        }
-
-    .auth-form {
-        background: white;
-        margin: 0 auto 10rem auto;
-        border-radius: .4rem;
-        gap: 1rem;
-        padding: 2rem;
-        max-width: 300px;
-
-        label {
-            padding-top: 1rem;
-            display: inline-block;
-            padding-bottom: .3rem;
-        }
-
-        input { 
-            background-color: #E5E9ED;
-            padding: .5rem;          
-            border-radius: .3rem;
-            border: none;
-            color: #333;
-            width: 100%;
-        }
-
-        .checkbox-container{
-            display: flex;
-            justify-items: flex-start;
-            align-items: center;
-
-            input {
-                width: auto;
-                margin-right: 1rem;
-            }
-        } 
-
-        button { 
-            background: #746BDE;
-            border-radius: 2.2px;
-            width: 100%;
-            border:none;
-            padding: .5rem 1rem;
-            margin-top: .4rem;
-            font-size: 0.85rem;
-            font-weight: 500;
-            text-transform: uppercase;
-        }
+    h1 {
+      color: #333;
+      font-size: 1rem;
+      font-weight: 600;
+      text-align: center;
+      width: 100%;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
     }
+
+    input {
+      background-color: #e5e9ed;
+      border-radius: 2px;
+      padding: 1rem;
+      border: none;
+      color: #333;
+      width: 100%;
+      height: 2.7rem;
+
+      &::placeholder {
+        color: #888;
+        font-size: 0.7rem;
+      }
+    }
+    .link {
+      align-self: center;
+      font-size: 0.7rem;
+      color: #888;
+    }
+
+    .checkbox-container {
+      display: flex;
+      height: 0.5rem;
+      align-items: center;
+      font-size: 0.7rem;
+      color: #888;
+
+      input {
+        width: auto;
+        margin-right: 1rem;
+      }
+    }
+
+    button {
+      background: #746bde;
+      color: #fff;
+      border-radius: 2px;
+      width: 100%;
+      height: 2.7rem;
+      border: none;
+      padding: 0.5rem 1rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      margin-top: 1rem;
+    }
+  }
 }
