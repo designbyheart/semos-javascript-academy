@@ -1,0 +1,158 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Semos JS Academy",
+    "description": "This document was generated from the branch main.\n\nIf you are a contributor to this project, you may access it here: https://paw.cloud/account/teams/5337730/projects/354015",
+    "version": "v0.0.0",
+    "contact": {
+      "name": "designbyheart",
+      "url": "https://paw.cloud/account/teams/5337730"
+    }
+  },
+  "host": "127.0.0.1:3000",
+  "schemes": [
+    "http"
+  ],
+  "basePath": "/api",
+  "paths": {
+    "/auth/signup": {
+      "post": {
+        "summary": "Signup",
+        "description": "",
+        "operationId": "95a5afc7-e426-4571-a871-4cb5d7c72a0f",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "{\"firstName\":\"John\",\"lastName\":\"Doe\",\"email\":\"john@doe.com\",\"password\":\"123123123\"}"
+            },
+            "in": "body",
+            "name": "body"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "no response description was provided for this operation"
+          }
+        }
+      }
+    },
+    "/auth/login": {
+      "post": {
+        "summary": "Login",
+        "description": "",
+        "operationId": "b2d96b20-5a51-490f-8614-940aa29435ea",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "{\"email\":\"john@doe.com\",\"password\":\"123123123\"}"
+            },
+            "in": "body",
+            "name": "body"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "no response description was provided for this operation"
+          }
+        }
+      }
+    },
+    "/hotels": {
+      "get": {
+        "summary": "Hotels",
+        "description": "",
+        "operationId": "fa84002b-41de-4a3d-81f0-17e2beb97e6f",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "default": "application/json",
+            "name": "Accept",
+            "required": false,
+            "in": "header"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "no response description was provided for this operation"
+          }
+        }
+      }
+    },
+    "/apartments": {
+      "get": {
+        "summary": "Apartments",
+        "description": "",
+        "operationId": "c3c10566-6828-4b90-bbbf-4e74cae00147",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "default": "application/json",
+            "name": "Accept",
+            "required": false,
+            "in": "header"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "no response description was provided for this operation"
+          }
+        }
+      }
+    },
+    "/search": {
+      "get": {
+        "summary": "Search",
+        "description": "",
+        "operationId": "c09a9be3-3984-4b35-9afb-837a8d2b2baa",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "default": "application/json",
+            "name": "Accept",
+            "required": false,
+            "in": "header"
+          },
+          {
+            "type": "string",
+            "default": "santo",
+            "name": "name",
+            "required": false,
+            "in": "query"
+          },
+          {
+            "type": "string",
+            "default": "apartment",
+            "name": "type",
+            "required": false,
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "no response description was provided for this operation"
+          }
+        }
+      }
+    }
+  },
+  "tags": []
+}
