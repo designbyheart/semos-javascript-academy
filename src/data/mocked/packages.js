@@ -1,5 +1,5 @@
 export const packages = [{
-    'id': 1,
+    'id': 101,
     'object': {
         'id': 3,
         'name': 'Santorini Bliss Hotel #1',
