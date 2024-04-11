@@ -1,3 +1,71 @@
 .destination-list {
     background: white;
+    color: black;
+    
+    .destination-wrapper {
+        margin: 0 auto;
+        max-width: 85%;
+        padding-top: 2rem;
+    }
+
+    h2 {
+        font-family: 'Switzer', sans-serif;
+        font-weight: 600;
+        font-size: 3rem;
+        line-height: 130%;
+        letter-spacing: -0.7px;
+        color: #0C141D;
+    }
+
+    .destination-navtabs {
+        padding: 2rem 0;
+    }
+
+    .destination-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1rem;
+        padding-bottom: 10rem;
+
+        @media (max-width: 1640px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: 1090px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        
+        .destination-item {
+            //background-color: red;
+            justify-self: center;
+            padding-bottom: 3rem;
+            
+            .destination-image {
+                width: auto;
+                height: 329px;
+                border-radius: 4px;
+
+                @media (max-width: 535px) {
+                    height: 250px;
+                }
+
+                @media (max-width: 425px) {
+                    height: 180px;
+                }
+                
+            }
+
+            .destination-name {
+                font-family: 'Switzer', sans-serif;
+                font-weight: 600;
+                font-size: 1.5rem;
+                margin-top: 1.5rem;
+                color: #0C141D;
+
+                @media (max-width: 425px) {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
 }
