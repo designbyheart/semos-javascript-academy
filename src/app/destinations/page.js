@@ -7,19 +7,16 @@ const DestinationsPage = () => {
     const [destinations, setDestinations] = useState([]);
     // Set active tab state
     const [activeTab, setActiveTab] = useState('All');
-    const [loading, setLoading] = useState(true);
     // Set search value state
 
     // Load destinations
     const loadDestinations = () => {
         // Fetch destinations from API
-        setLoading(true)
         fetch('/api/packages')
             .then((response) => response.json())
             .then((data) => {
                 setDestinations(data);
             });
-        setLoading(false);
     }
 
     const onUpdateTab = (tab) => {
