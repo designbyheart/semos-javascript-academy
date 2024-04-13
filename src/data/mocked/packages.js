@@ -12,6 +12,7 @@ export const packages = [{
         'isAvailable': false,
         'rating': 5,
         'description': 'A tranquil retreat on the cliffs of Santorini, offering stunning sunset views.',
+        image: '/assets/images/argentina@3x.png',
     },
     'duration': 7,
     'transport': 'plane',
@@ -22,7 +23,6 @@ export const packages = [{
     'country': 'Greece',
     'name': 'Santorini Bliss Hotel Package #1',
     'city': 'Santorini',
-    'image': 'https://crystalhotel.rs/wp-content/uploads/2024/02/4-scaled.webp',
 },
 {
     'id': 1,
@@ -48,7 +48,6 @@ export const packages = [{
     'country': 'Greece',
     'name': 'Athens Grand Hotel Package #1',
     'city': 'Athens',
-    'image': 'https://crystalhotel.rs/wp-content/uploads/2024/02/4-scaled.webp',
 },
 {
     'id': 2,
@@ -74,7 +73,6 @@ export const packages = [{
     'country': 'Greece',
     'name': 'Mykonos Paradise Resort Package #1',
     'city': 'Mykonos',
-    'image': 'https://crystalhotel.rs/wp-content/uploads/2024/02/4-scaled.webp',
 },
 {
     'id': 3,
@@ -100,8 +98,8 @@ export const packages = [{
     'country': 'Greece',
     'name': 'Santorini Bliss Hotel Package #1',
     'city': 'Santorini',
-    'image': 'https://crystalhotel.rs/wp-content/uploads/2024/02/4-scaled.webp',
-},
+}
+    ,
 {
     'id': 4,
     'object': {
@@ -126,7 +124,6 @@ export const packages = [{
     'country': 'Greece',
     'name': 'Crete Beachfront Villas Package #1',
     'city': 'Crete',
-    'image': 'https://crystalhotel.rs/wp-content/uploads/2024/02/4-scaled.webp',
 },
 {
     'id': 5,
@@ -152,7 +149,6 @@ export const packages = [{
     'country': 'Greece',
     'name': 'Rhodes Palace Hotel Package #1',
     'city': 'Rhodes',
-    'image': 'https://crystalhotel.rs/wp-content/uploads/2024/02/4-scaled.webp',
 },
 {
     'id': 6,
@@ -178,7 +174,6 @@ export const packages = [{
     'country': 'Greece',
     'name': 'Corfu Seaside Resort Package #1',
     'city': 'Corfu',
-    'image': 'https://crystalhotel.rs/wp-content/uploads/2024/02/4-scaled.webp',
 },
 {
     'id': 7,
@@ -204,7 +199,6 @@ export const packages = [{
     'country': 'Greece',
     'name': 'Paros Island Retreat Package #1',
     'city': 'Paros',
-    'image': 'https://crystalhotel.rs/wp-content/uploads/2024/02/4-scaled.webp',
 },
 {
     'id': 8,
@@ -230,7 +224,6 @@ export const packages = [{
     'country': 'Greece',
     'name': 'Naxos Beach Resort Package #1',
     'city': 'Naxos',
-    'image': 'https://crystalhotel.rs/wp-content/uploads/2024/02/4-scaled.webp',
 }, {
     'id': 9,
     'object': {
@@ -255,7 +248,6 @@ export const packages = [{
     'country': 'Greece',
     'name': 'Zakynthos Luxury Villas Package #1',
     'city': 'Zakynthos',
-    'image': 'https://crystalhotel.rs/wp-content/uploads/2024/02/4-scaled.webp',
 },
 {
     'id': 10,
@@ -281,6 +273,5 @@ export const packages = [{
     'country': 'Greece',
     'name': 'Patmos Serenity Resort Package #1',
     'city': 'Patmos',
-    'image': 'https://crystalhotel.rs/wp-content/uploads/2024/02/4-scaled.webp',
 },
 ];
