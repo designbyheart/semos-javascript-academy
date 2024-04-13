@@ -36,23 +36,14 @@
         }
         
         .destination-item {
-            //background-color: red;
             justify-self: center;
             padding-bottom: 3rem;
             
             .destination-image {
-                width: auto;
-                height: 329px;
-                border-radius: 4px;
-
-                @media (max-width: 535px) {
-                    height: 250px;
-                }
-
-                @media (max-width: 425px) {
-                    height: 180px;
-                }
-                
+                width: 100%;
+                max-width: auto;
+                border-radius: 4px;   
+                //object-fit: contain;             
             }
 
             .destination-name {
@@ -61,10 +52,6 @@
                 font-size: 1.5rem;
                 margin-top: 1.5rem;
                 color: #0C141D;
-
-                @media (max-width: 425px) {
-                    font-size: 1rem;
-                }
             }
         }
     }
