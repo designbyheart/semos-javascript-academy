@@ -1,4 +1,4 @@
-import './_destinastions-list.scss';
+import './_destinations-list.scss';
 
 import SearchField from '@/components/molecules/SearchField';
 import TabBar from '@/components/molecules/TabBar';
@@ -16,12 +16,23 @@ export default function DestinationList({ destinations, activeTab, onTabChange, 
                     {/* <SearchField value={searchValue} onChange={onSearchChange} /> */}
                 </div>
                 <div className="destination-grid">
-                    {destinations?.map((destination) => {
+                    {destinations?.filter(destination => {
+                        if (activeTab == "Best seller") {
+                            return destination.object.rating === 5;
+                        } else {
+                            return true;
+                        }
+                    }).map((destination) => {
                         return (
                             <div className="destination-item" key={destination.id}>
-                                <a href={destination.link}>
-                                    <img className="destination-image" src={destination.image} alt={destination.name} />
-                                    <h3 className="destination-name">{destination.name}</h3>
+                                <a href={`/destinations/${destination.id}`}> {/* TO-DO: change /destinations/ to a reusable variable */}
+                                    <img className="image" src={destination.object.image} alt={destination.name} />
+                                    <div className='info'>
+                                        <p className="price">${destination.price}</p>
+                                        <p className="rating">⭐ {destination.object.rating} (reviews)</p>
+                                    </div>
+                                    <h1 className="name">{destination.name}</h1>
+                                    <p className='description'>{destination.description}</p>
                                 </a>
                             </div>
                         );

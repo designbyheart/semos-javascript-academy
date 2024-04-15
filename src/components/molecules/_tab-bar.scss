@@ -29,3 +29,18 @@
         color: white;
     }
 }
+
+.wired-container {
+    button {
+        &:hover {
+            background: transparent;
+            color: purple;
+        }
+    }
+
+    .active {
+        background: transparent;
+        color: purple;
+        border-bottom: 1px solid purple;
+    }
+}

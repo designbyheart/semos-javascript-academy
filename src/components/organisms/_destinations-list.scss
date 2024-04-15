@@ -38,20 +38,50 @@
         .destination-item {
             justify-self: center;
             padding-bottom: 3rem;
+            font-family: 'Switzer', sans-serif;
+            font-weight: 500;
             
-            .destination-image {
+            .image {
                 width: 100%;
                 max-width: auto;
                 border-radius: 4px;   
                 //object-fit: contain;             
             }
 
-            .destination-name {
+            .info {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                margin: 1rem 0;
+
+                .price {
+                    font-weight: 500;
+                    font-size: 24px;
+                    line-height: 150%;
+                    color: #FBA107;
+                }
+    
+                .rating {
+                    font-size: 18px;
+                    line-height: 150%;
+                    color: #667085;
+                }
+            }
+
+            .name {
                 font-family: 'Switzer', sans-serif;
                 font-weight: 600;
                 font-size: 1.5rem;
-                margin-top: 1.5rem;
+                margin-top: 1rem;
                 color: #0C141D;
+            }
+
+            .description {
+                font-size: 1rem;
+                line-height: 150%;
+                margin-top: 1rem;
+                color: rgba(12, 20, 29, 0.5);
             }
         }
     }

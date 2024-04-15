@@ -1,0 +1,172 @@
+body {
+    background: white;
+    color: black;
+    font-family: 'Switzer', sans-serif;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+.destination-wrapper {
+    margin: 0 auto;
+    max-width: 85%;
+    padding-top: 2rem;
+
+    .info {
+        display: flex;
+        flex-direction: row;
+        //justify-content: space-between;
+        align-items: center;
+        margin: 1rem 0 2rem 0;
+        gap: 2rem;
+
+        .price {
+            font-weight: 500;
+            font-size: 24px;
+            color: #FBA107;
+        }
+
+        .rating {
+            font-size: 18px;
+            color: #667085;
+        }
+    }
+
+    .picture-gallery {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 200px);
+        grid-column-gap: 15px;
+        grid-row-gap: 15px;
+        height: 400px;
+        width: auto;
+        overflow: hidden;
+        margin-bottom: 2rem;
+        
+        .image-1 { 
+            grid-area: 1 / 1 / 3 / 3;
+            width: 100%;
+            height: 100%; /* Ensures the image takes up the full height of the grid cell */
+            object-fit: cover;
+        }
+        .image-2 { 
+            grid-area: 1 / 3 / 2 / 4;
+            width: 100%;
+            height: 100%; /* Ensures the image takes up the full height of the grid cell */
+            object-fit: cover;
+        }
+        .image-3 { 
+            grid-area: 1 / 4 / 2 / 5;
+            width: 100%;
+            height: 100%; /* Ensures the image takes up the full height of the grid cell */
+            object-fit: cover;
+        }
+        .image-4 { 
+            grid-area: 2 / 3 / 3 / 4;
+            width: 100%;
+            height: 100%; /* Ensures the image takes up the full height of the grid cell */
+            object-fit: cover;
+        }
+        .image-5 { 
+            grid-area: 2 / 4 / 3 / 5;
+            width: 100%;
+            height: 100%; /* Ensures the image takes up the full height of the grid cell */
+            object-fit: cover;
+        }
+    }
+
+    .details {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 3rem;
+
+        .details-left {
+            width: 60%;
+
+            .title {
+                margin: 2rem 0;
+                font-size: 32px;
+                color: #0C141D;
+                line-height: 150%;
+            }
+        
+            .description {
+                font-size: 18px;
+                color: #667085;
+            }
+        }
+
+        .details-right {
+            width: 23%;
+            display: flex;
+            flex-direction: column;
+            padding: 16px 16px 20px;
+            background: #FFFFFF;
+            border: 1px solid #EAECF0;
+            border-radius: 4px;
+
+            .days {
+                font-weight: 600;
+                font-size: 28px;
+                color: #0C141D;
+            }
+
+            .info {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1.5rem 0;
+                margin: 0;
+                gap: 2rem;
+                border-bottom: 1px solid #D0D5DD;
+
+                .price {
+                    font-weight: 500;
+                    font-size: 24px;
+                    color: #FBA107;
+                }
+        
+                .rating {
+                    font-size: 18px;
+                    color: #667085;
+                }
+            }
+
+            .booking-info {
+                margin-top: 1.5rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                font-weight: 500;
+                font-size: 18px;
+                color: #98A2B3;
+
+                .price {
+                    margin-top: 1rem;
+                    font-weight: 500;
+                    font-size: 32px;
+                    color: #F79009;
+                }
+
+                .code {
+                    margin-top: 1rem;
+                    font-weight: 500;
+                    font-size: 28px;
+                    color: #0C141D;
+                }
+            }
+
+            .book-btn {
+                margin-top: 3rem;
+                padding: 8px 20px;
+                background: #635AFF;
+                border-radius: 2px;
+                font-weight: 500;
+                font-size: 18px;
+                text-align: center;
+                color: #FFFFFF;
+            }
+        }
+    }
+}
