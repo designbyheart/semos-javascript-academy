@@ -37,3 +37,6 @@ next-env.d.ts
 .tool-versions
 pnpm-lock.yaml
 package-lock.js
+
+#custom
+README.md
