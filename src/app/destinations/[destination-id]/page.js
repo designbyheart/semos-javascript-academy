@@ -6,7 +6,6 @@ const DestinationDetailPage = ({ params }) => {
     const { 'destination-id': destinationId } = params;
 
     const [destinationDetails, setDestinationDetails] = useState(null);
-    const [isLoading, setIsLoading] = useState(true);
 
     const loadDestinationDetails = () => {
         // Fetch destinations from API
@@ -14,20 +13,18 @@ const DestinationDetailPage = ({ params }) => {
             .then((response) => response.json())
             .then((data) => {
                 setDestinationDetails(data);
-                setIsLoading(false);
             });
 
     }
 
     useEffect(() => {
         if (!destinationDetails) {
-            setIsLoading(true);
             loadDestinationDetails()
         }
     });
 
     return (
-        <DestinationDetails details={destinationDetails} isLoading={isLoading} />
+        <DestinationDetails details={destinationDetails} />
     );
 };
 
