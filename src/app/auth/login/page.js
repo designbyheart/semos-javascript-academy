@@ -29,6 +29,7 @@ const LoginPage = () => {
       const jsonResponse = await response.json();
       console.log("response from server", jsonResponse);
       // TODO: Redirekcija ka private strani (dashboard)
+      // TODO: Store token in local storage
     } else {
       console.error("Failed to fetch data", response);
     }

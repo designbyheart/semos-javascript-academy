@@ -3,8 +3,7 @@ $input-background: #D0D0D0;
 // atoms
 
 // molecules
-@import '../components/molecules/input-field';
-@import '../components/molecules/navigation-menu';
+@import './molecules';
 
 // organisms
 
@@ -12,3 +11,4 @@ $input-background: #D0D0D0;
 
 // pages
 @import './auth-page';
+@import '../app/packages/packages';
