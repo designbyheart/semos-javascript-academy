@@ -1,7 +1,8 @@
 'use client';
-import { redirect } from 'next/navigation';
+import PrivatePage from '@/components/templates/PrivateTemplate';
 import { useEffect } from 'react';
 import { loadFromStorage } from '@/utilities/localStorage';
+import  { useState } from 'react';
 
 const DashboardPage = () => {
     // load api data
@@ -9,22 +10,12 @@ const DashboardPage = () => {
     // validate data
     // validate user - does token exists
 
-    useEffect(() => {
-        // check if user is authenticated
-        const authToken = loadFromStorage('authToken')
-        console.log('user token', authToken);
-        if(!authToken) {
-            redirect('/auth/login');
-            console.log('user is not authenticated');
-        }
-    });
-
-
-    return (
+console.log('rendered dashboard')
+    return <PrivatePage>
         <div>
             <h1>Dashboard Page</h1>
         </div>
-    );
+    </PrivatePage>
 };
 
 export default DashboardPage;
